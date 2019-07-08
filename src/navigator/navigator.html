@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CN Ads Navigator</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div id="navbar" class="navbar">
+    <button id="initiator">Condé Nast Ads</button>
+  </div>
+  <div id="overlay" class="overlay" style="display:none;">
+    <div id="underlay" class="underlay"></div>
+    <div id="info-wrapper" class="info-wrapper">
+      <div class="active" data-tab="onSlotInfo"></div>
+      <div data-tab="onRequests"></div>
+      <div data-tab="onNavigation">
+        <div id="navigation" class="tab-wrapper">
+          <button class="tab" data-outgoing="onSlotInfo">Info</button>
+          <button class="tab" data-outgoing="onRequests">Ad Requests</button>
+        </div>
+      </div>
+      <button id="close_overlay" class="close">&times;</button>
+      <button class="hamburger"><div></div><div></div><div></div></button>
+    </div>
+  </div>
+  <script src="./navigator.js"></script>
+</body>
+</html>

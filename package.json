@@ -1,0 +1,33 @@
+{
+  "name": "gpt-bookmarklet",
+  "version": "1.0.0",
+  "description": "Bookmarklet to connect with Google Publisher Tags API",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "npm run clean && NODE_ENV=development rollup -c && npm run copy",
+    "build:prod": "npm run clean && NODE_ENV=production rollup -c && npm run copy",
+    "build:stag": "npm run clean && NODE_ENV=staging rollup -c && npm run copy",
+    "clean": "rm -rf ./dist",
+    "copy": "cp ./src/navigator/navigator.html ./dist/navigator.html && cp ./src/navigator/style.css ./dist/style.css",
+    "dev": "npm run build:dev && npm run open",
+    "open": "concurrently 'http-server -a localhost -p 8080' 'open http://localhost:8080/sample.html'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CondeNast/gpt-bookmarklet.git"
+  },
+  "keywords": [],
+  "author": "DJ Rosenbaum",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/CondeNast/gpt-bookmarklet/issues"
+  },
+  "homepage": "https://github.com/CondeNast/gpt-bookmarklet#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.1",
+    "http-server": "^0.11.1",
+    "rollup": "^1.1.2",
+    "rollup-plugin-replace": "^2.1.0"
+  }
+}

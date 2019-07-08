@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GPT Ads Info Demo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+  <script>
+    var googletag = window.googletag || {};
+    googletag.cmd = window.googletag.cmd || [];
+
+    googletag.cmd.push(() => {
+      googletag
+        .defineSlot('/6355419/Travel/Europe/France/Paris', [300, 250], 'adslot')
+        .addService(googletag.pubads())
+        .setTargeting('foo', ['bar'])
+        .setTargeting('test', ['a', 'b', 'c']);
+
+      googletag.pubads().setTargeting('mykey', ['val1', 'val2']);
+
+      googletag.enableServices();
+    });
+  </script>
+</head>
+
+<body>
+  <div id="adslot" style="width: 300px;">
+    <script>
+      window.googletag.cmd.push(() => {
+        window.googletag.display("adslot");
+      });
+    </script>
+  </div>
+  <script src="./dist/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+/* ==== CSS RESET ==== */
+html, body, div, span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: Noto Sans, Helvetica, Arial, sans-serif;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: #199ade;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 20px;
+  color: #727c82;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+table {
+  font-size: 14px;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+tbody {
+}
+
+tr {
+  border: 1px solid #ccc;
+}
+
+tr:nth-child(even) {
+  background: #e0e0e0;
+}
+
+td {
+  border: 1px solid #ccc;
+  padding: 7px;
+  word-wrap: break-word;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 30px;
+  background-color: #0c3041;
+  text-align: center;
+}
+
+.navbar button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ==== OVERLAY ==== */
+.overlay {}
+
+.overlay .underlay {
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay .info-wrapper {
+  background-color: #fff;
+  box-sizing: border-box;
+  height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 70px;
+  position: relative;
+  z-index: 1;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.overlay .info-wrapper .close {
+  background: none;
+  border: none;
+  color: #777;
+  padding: 8px 12px;
+  display: inline-block;
+  font-size: 21px;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0px 1px 1px #888;
+  line-height: 21px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.overlay .info-wrapper .hamburger {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  background: none;
+  border: none;
+}
+
+.overlay .info-wrapper .hamburger > div {
+  background-color: #999;
+  border-radius: 2px;
+  height: 4px;
+  margin: 4px 0;
+  width: 25px;
+}
+
+.overlay .info-wrapper .close svg {
+  fill: #777;
+}
+
+.overlay .tab-wrapper .tab {
+  background-color: #134762;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.overlay .tab-wrapper .tab:last-of-type {
+    border-right: 1px solid #777;
+}
+
+.overlay .info-wrapper div[data-tab] {
+  display: none;
+}
+
+.overlay .info-wrapper div[data-tab].active {
+  display: block;
+}
+
+.overlay .info-wrapper div[data-tab] > div {
+  margin-bottom: 20px;
+}
+
+/* ==== SElECT ==== */
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper:after {
+    position: absolute;
+    top: 50%;
+    right: .25em;
+    -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-120%);
+    transform: rotate(-45deg) translateX(-50%) translateY(-120%);
+    margin-top: -2px;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-color: #777;
+    width: .5em;
+    height: .5em;
+    content: "";
+    pointer-events: none;
+}
+
+.select-wrapper select {
+  border: 1px solid #dbdee0;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  background-color: #f6f7f7;
+  color: #2b3a44;
+  outline: none;
+  font-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 7px;
+}
+
+.slot-request-wrapper {
+  border-bottom: 2px solid #000;
+  padding-bottom: 20px;
+}
+
+div.slot-request-wrapper:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.slot-request-wrapper > div {
+  margin-bottom: 20px;
+}
