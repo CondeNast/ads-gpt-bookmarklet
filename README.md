@@ -7,6 +7,11 @@ _Proudly built by:_
 
 <a href="https://technology.condenast.com"><img src="https://user-images.githubusercontent.com/1215971/35070721-3f136cdc-fbac-11e7-81b4-e3aa5cc70a17.png" title="Conde Nast Technology" width=350/></a>
 
+# Demo
+Try it out
+
+[https://condenast.github.io/gpt-bookmarklet/](https://condenast.github.io/gpt-bookmarklet/)
+
 # Development
 
 ## Prerequisites
