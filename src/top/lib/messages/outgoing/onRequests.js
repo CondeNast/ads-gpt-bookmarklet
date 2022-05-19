@@ -12,7 +12,7 @@ export default function onRequests() {
 
 function getRequests() {
   const requests = performance.getEntries().filter(x => {
-    return /^https:\/\/securepubads\.g\.doubleclick\.net\/gampad\/ads\?gdfp_req/.test(x.name);
+    return /^https:\/\/securepubads\.g\.doubleclick\.net\/gampad\/ads\?/.test(x.name);
   });
 
   return requests.map(request => request.name);
